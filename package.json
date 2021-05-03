@@ -1,0 +1,29 @@
+{
+  "name": "fabletest",
+  "version": "0.1.0",
+  "description": "Test fable",
+  "main": "App.js",
+  "scripts": {
+    "build-es6": "fable fsharp/WebApp/WebApp.fsproj -o es6",
+    "build-commonjs": "npm run-script build-es6 && babel es6 -d commonjs/unbundled --plugins=@babel/transform-modules-commonjs",
+    "build-commonjs-bundle": "npm run-script build-es6 && babel es6 --out-file commonjs/bundled/App.js --plugins=@babel/transform-modules-commonjs",
+    "test": "node commonjs/unbundled/App.js",
+    "test-bundled": "node commonjs/bundled/App.js"
+  },
+  "keywords": [
+    "fable",
+    "f#",
+    "fsharp",
+    "babel"
+  ],
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Shroomander",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0"
+  }
+}
