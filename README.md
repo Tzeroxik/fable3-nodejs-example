@@ -3,6 +3,8 @@ An example project using fable 3 to compile to javascript that can run on nodejs
 
 ### commands
 
+use ``npm run-script`` with the following tasks
+
 ``build-es6`` -> compile Fsharp into JS (ES6)
 
 ``build-commonjs`` -> transpile FSharp into JS (commonJs)
