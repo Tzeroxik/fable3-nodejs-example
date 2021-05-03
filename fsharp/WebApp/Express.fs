@@ -1,11 +1,19 @@
 module Express
 
-open Fable.Core
 open Fable.Core.JsInterop
+
+type Method = GET | POST | PUT | HEAD
+
+type Headers = 
+    abstract host: option<string> 
 
 type Response = 
     abstract send: string -> unit
-type Request = obj
+
+type Request = 
+    abstract headers: Headers
+    abstract method: Method
+    abstract originalUrl: string
 
 type Handler = Request -> Response -> unit 
 
