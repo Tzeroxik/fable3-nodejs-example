@@ -3,9 +3,9 @@ An example project using fable 3 to compile to javascript that can run on nodejs
 
 ## Requirements
 
-``nodejs``
+``nodejs`` and ``dotnet 5 sdk`` must be installed.
 
-``dotnet 5 sdk``
+if the ``fable3 compiler`` isn't installed install it using ``dotnet tool install fable``
 
 ## npm tasks
 
